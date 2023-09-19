@@ -1,0 +1,27 @@
+/*** GLOBAL SETTING ***/
+body {margin:0; padding:0;font:normal 18px 'Lexend', sans-serif; color:#010101; line-height:normal;}
+
+/*** GLOBAL SELECTORS ***/
+a{ color:#5a1613; transition: .3s ease;}
+a:hover{ color:#000000;} 
+/*Main Content*/
+
+.container{max-width: min(1290px, 96%); margin-inline: auto; width: auto;}
+
+.testimonial-grid{display: grid; gap: 30px; }
+.testimonial-grid .testimonial{padding: 100px 0;}
+.one{background: #2ecc71; }
+.two{background: #2980b9;}
+.three{background: #8e44ad;}
+.four{background: #d35400;}
+.five{background: #bdc3c7;}
+.six{background: #c0392b; }
+
+.testimonial:nth-child(3){grid-column-start: 1;}
+/* .grid-col-span-two{grid-column: span 2;} */
+
+@media (min-width: 801px){
+    .testimonial-grid{grid-template-columns: repeat(4,1fr);}
+    .grid-col-span-two{grid-column: span 2;}
+    .testimonial:last-child{grid-column-start: 4; grid-row: 1 / 3;}
+}
